@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AllowFileAccessOutsideOfWidget</key>
+	<true/>
+	<key>AllowInternetPlugins</key>
+	<true/>
+	<key>AllowNetworkAccess</key>
+	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>ChineseWords</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.robrohan.cn.widget.Chinese</string>
+	<key>CFBundleName</key>
+	<string>ChineseWords</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.5</string>
+	<key>CFBundleVersion</key>
+	<string>1.5</string>
+	<key>CloseBoxInsetX</key>
+	<integer>13</integer>
+	<key>CloseBoxInsetY</key>
+	<integer>13</integer>
+	<key>Height</key>
+	<integer>224</integer>
+	<key>MainHTML</key>
+	<string>ChineseWords.html</string>
+	<key>Width</key>
+	<integer>238</integer>
+</dict>
+</plist>

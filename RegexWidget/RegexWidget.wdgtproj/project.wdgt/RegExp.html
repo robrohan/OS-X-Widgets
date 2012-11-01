@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <style type="text/css" title="AppleStyle">
+        @import "RegExp.css";
+    </style>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="localizedStrings.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/utilities.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/setup.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/Text.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/InfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/GlassButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="RegExp.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollbar.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollArea.js" charset="utf-8"></script>
+    <script type="text/javascript" src="Parts/ScrollArea.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleAnimator.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleInfoButton.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollbar.js" charset="utf-8"></script>
+    <script type="text/javascript" src="file:///System/Library/WidgetResources/AppleClasses/AppleScrollArea.js" charset="utf-8"></script>
+</head>
+<body onload="load();">
+    <div id="front">
+        <img id="frontImg" src="Images/front.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.frontimage" apple-style="image-theme: 1; image-shape: 3; image-opacity: 1.00; image-top-color: 0.8824,0.8824,0.8824; image-bottom-color: 0.4751,0.4751,0.4751; image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.6154,0.6154,0.6154; image-border-width: 1; shine-strength: 0.71; shine-alpha-level: 0.50; shine-height: 0.50; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <div class="apple-no-children" id="info" apple-part="com.apple.Dashcode.part.infobutton" apple-default-image-visibility="hidden"></div>
+        <textarea class="apple-textarea apple-no-children" apple-part="com.apple.Dashcode.part.textarea" id="txtRegex" apple-group="textarea" onkeyup="runWithPause();">/[A-Z]+/</textarea>
+        <textarea class="apple-textarea apple-no-children" apple-part="com.apple.Dashcode.part.textarea" id="txtTarget" apple-group="textarea1" onkeyup="runWithPause();"></textarea>
+        <div apple-part="com.apple.Dashcode.part.checkboxbutton" id="chkCaseControl" apple-group="checkboxbutton" onclick="runRegex();">
+            <input type="checkbox" name="" apple-group="checkboxbutton" id="chkCase" value="">
+            <div style="position: absolute; top: 2px; left: 18px; text-align: left; vertical-align: middle;" apple-group="checkboxbutton" id="chkCaseLabel" apple-style="part-height-dependent: true;">Case Insensitive</div>
+        </div>
+        <div apple-part="com.apple.Dashcode.part.checkboxbutton" id="chkGlobalControl" apple-group="checkboxbutton3" onclick="runRegex();">
+            <input type="checkbox" name="Checkbox" apple-group="checkboxbutton3" id="chkGlobal">
+            <div style="position: absolute; top: 2px; left: 18px; text-align: left; vertical-align: middle;" apple-group="checkboxbutton3" id="chkGlobalLabel" apple-style="part-width-dependent: true;part-height-dependent: true;">Global</div>
+        </div>
+        <div apple-part="com.apple.Dashcode.part.scrollarea" class="apple-scrollarea" id="scrollArea" apple-group="scrollArea">
+            <div id="regexresult" class="content" apple-group="scrollArea" style="position: absolute; left: 0px; top: 0px; right: 4px; bottom: 0px; overflow-x: hidden; overflow-y: hidden; "></div></div>
+        <div apple-part="com.apple.Dashcode.part.checkboxbutton" id="chkMultiLineControl" apple-group="checkboxbutton" onclick="runRegex(event)">
+            <input type="checkbox" name="Checkbox" id="chkMultiLine" apple-group="checkboxbutton">
+            <div id="chkMultiLineLabel" onclick=" ">Multiline</div>
+        </div>
+    </div>
+    <div id="back">
+        <img id="backImg" src="Images/back.png" alt="" apple-locked="true" apple-part="com.apple.Dashcode.part.backimage" apple-style=" image-radius: 12,12,12,12; image-border: 1; image-border-color: 0.1500,0.1500,0.1500; image-border-width: 3; shadow-include-shadow: 1; shadow-blur: 9.00; shadow-offset: -1.00,-6.00; shadow-color: 0.0000,0.0000,0.0000,0.3333;">
+        <div id="done" class="apple-no-children" apple-part="com.apple.Dashcode.part.glassbutton"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" id="widgettitle" apple-group="text" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" id="copyright" apple-group="text1" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" id="linktext" apple-group="text2" onclick="widget.openURL('http://robrohan.com/projects/widgets/');" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+        <img src="Images/robot 1.png" id="img" style="">
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="versiontext" apple-style="part-width-dependent: true;part-height-dependent: true;"></div>
+        <div apple-part="com.apple.Dashcode.part.text" class="apple-text apple-no-children" apple-default-image-visibility="hidden" apple-text-overflow="ellipsis" id="versionnum" apple-style="part-height-dependent: true;"></div>
+    </div>
+</body>
+</html>
