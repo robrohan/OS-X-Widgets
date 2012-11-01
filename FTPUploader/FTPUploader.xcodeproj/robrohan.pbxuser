@@ -1,0 +1,68 @@
+// !$*UTF8*$!
+{
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = DA8E41F10FE099A800EFD269 /* FTPUploader */;
+		activeTarget = 8D1107260486CEB800E47090 /* FTPUploader */;
+		codeSenseManager = DA8E41FB0FE099C600EFD269 /* Code sense */;
+		executables = (
+			DA8E41F10FE099A800EFD269 /* FTPUploader */,
+		);
+		perUserDictionary = {
+			PBXPerProjectTemplateStateSaveDate = 266377640;
+			PBXWorkspaceStateSaveDate = 266377640;
+		};
+		sourceControlManager = DA8E41FA0FE099C600EFD269 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	77631A3E0C0748CF005415CB /* main.py */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {732, 704}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 405}";
+			sepNavWindowFrame = "{{440, 100}, {791, 761}}";
+		};
+	};
+	8D1107260486CEB800E47090 /* FTPUploader */ = {
+		activeExec = 0;
+		executables = (
+			DA8E41F10FE099A800EFD269 /* FTPUploader */,
+		);
+	};
+	DA8E41F10FE099A800EFD269 /* FTPUploader */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = FTPUploader;
+		sourceDirectories = (
+		);
+	};
+	DA8E41FA0FE099C600EFD269 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	DA8E41FB0FE099C600EFD269 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+}
