@@ -14,9 +14,9 @@ Name: This is a name for the server. This is anything you’d like it to be. Any
 
 Host: This is the FTP server address. It can either be in text form (ftp.host.com for example), or in IP form (192.168.1.333 for example). This setting should only be the server name without any ftp:// or path information. For example these are all ‘incorrect’
 
-```ftp://ftp.myhost.com```
+_ftp://ftp.myhost.com_
 
-```ftp://user@host:192.168.1.4/test/test```
+_ftp://user@host:192.168.1.4/test/test_
 
 For those example URIs you would put ftp.myhost.com and “192.168.1.4” in the Host field and nothing more.
 
@@ -77,7 +77,7 @@ Regex Widget
 
 Simple regular expression tester. Useful when trying out regexs for Javascript code, and somewhat useful when trying to build regular expressions for other languages (like sed, ruby, or perl).
 
-The match area at the bottom shows the array of matches and the index. It is running the match through the Javascript code ```Array = String.match(<<your_regex>>)```.
+The match area at the bottom shows the array of matches and the index. It is running the match through the Javascript code Array = String.match(_your regex_).
 
 The software is made available under the terms of the LGPL. By downloading or using the software you agree to the terms of the LGPL.
 
