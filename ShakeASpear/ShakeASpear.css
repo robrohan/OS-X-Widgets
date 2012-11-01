@@ -1,0 +1,40 @@
+/*
+	
+*/
+body 
+{
+	margin: 0px;
+	padding: 0px;
+	background-color: transparent;
+}
+
+.box 
+{
+	border: 0px;
+	padding: 0px 0px 5px 0px; 
+	background: transparent url('Images/ShakeASpear.png') no-repeat bottom left;
+	width: 500px;
+	height: 160px;
+}
+
+.insult
+{
+	font-family: Papyrus, Zapfino, Cochin, sans-serif;
+	font-size: 15pt;
+	color: yellow;
+	position: absolute;
+	top: 65px;
+	left: 25px;
+	width: 500px;
+}
+
+.scribe
+{
+	background: transparent url('Images/scribe_icon.png') no-repeat bottom left;
+	width: 103px;
+	height: 98px;
+	position: absolute;
+	top: 65px;
+	left: 260px;
+	cursor: hand;
+}
